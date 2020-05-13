@@ -30,7 +30,7 @@ body {
   }
 
   header {
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@ display: block;
  .sobrete {
    font-size: 40px;
    font-family: 'Source Code Pro', monospace;
-   color: black;
+   color: wheat;
  }
 
  @media (min-width: 700px) {
