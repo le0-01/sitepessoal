@@ -41,6 +41,7 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
   
   .menu ul {
@@ -53,9 +54,16 @@ body {
     list-style: none;
   }
 
+  .menu a:active,
   .menu a{
 padding: 5px; 5px;
 display: block;
+transition: backgraund-color 2s, color 1s;
+  }
+
+  .menu a:hover {
+    background-color: teal;
+    color: whitesmoke;
   }
   
   a {
@@ -69,7 +77,7 @@ display: block;
   
   .site-subtitle,
   .site-title,
-  .sobrete {
+  .sobreescrever {
     text-align: center;
     color: whitesmoke;
     font-family: 'Shadows Into Light', cursive;
@@ -82,7 +90,7 @@ display: block;
     font-size: 50px;
   }
 
- .sobrete {
+  .sobreescrever {
    font-size: 40px;
    font-family: 'Source Code Pro', monospace;
    color: wheat;
@@ -132,7 +140,7 @@ display: block;
     background-color: ROYALBLUE;
     padding: 0.5em;
   }
-
+  .contato,
   .portfólio h2{
     font-family: 'Source Code Pro', monospace;
     color: silver;
@@ -144,6 +152,11 @@ display: block;
     width: 210px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover {
+    transform: scale(1.4) ; 
   }
 
  .img-arroz {
@@ -158,6 +171,11 @@ display: block;
   height: 170px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 500ms;
+}
+
+.img-mudar:hover {
+  transform: scale(1.4); 
 }
 
 .img-mudar2 {
@@ -165,6 +183,11 @@ display: block;
   height: 170px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 500ms;
+}
+
+.img-mudar2:hover {
+  transform: scale(1.4); 
 }
 
 .img-mudar3 {
@@ -173,4 +196,30 @@ display: block;
   object-fit: cover;
   object-position: top;
   border-radius: 20px;
+  transition: transform 500ms;
+}
+
+.img-mudar3:hover {
+  transform: scale(1.4); 
+}
+
+.contato {
+  background-color: black;
+  padding: 0.5;
+}
+
+.contato .icons: {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow:0px 1px 10px yellowgreen;
 }
