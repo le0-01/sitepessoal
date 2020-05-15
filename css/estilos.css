@@ -25,7 +25,7 @@ body {
   /* se a tela tiver pelo menos 400px vai carregar estes estilos */
   @media (min-width: 250px) {
     body .sobrete {
-      font-size: 15px;
+      font-size: 25px;
     }
   }
 
@@ -56,7 +56,7 @@ body {
 
   .menu a:active,
   .menu a{
-padding: 5px; 5px;
+padding: 3px; 5px;
 display: block;
 transition: backgraund-color 2s, color 1s;
   }
@@ -83,15 +83,20 @@ transition: backgraund-color 2s, color 1s;
     font-family: 'Shadows Into Light', cursive;
     font-size: 60px;
   }
+
+  .sobrete {
+    clip-path: polygon(50% 0%, 64% 28%, 98% 35%, 83% 71%, 79% 91%, 50% 68%, 21% 91%, 15% 70%, 2% 35%, 37% 28%);
+  }
   
   .site-subtitle {
     font-style: italic;
     font-family: 'Share', cursive;
     font-size: 50px;
+    clip-path: ellipse(50% 45% at 50% 50%);
   }
 
   .sobreescrever {
-   font-size: 40px;
+   font-size: 50px;
    font-family: 'Source Code Pro', monospace;
    color: wheat;
  }
@@ -114,45 +119,84 @@ transition: backgraund-color 2s, color 1s;
   }
 }
 
-  .portfólio .grid {
+  .portfolio .grid {
     display: grid;
     gap: 2.5em;
   }
 
   @media (min-width: 570px) {
-    .portfólio .grid {
+    .portfolio .grid {
       grid-template-columns: 250px 250px;
     }
   }
 
   @media (min-width: 880px) {
-    .portfólio .grid {
+    .portfolio .grid {
       grid-template-columns: 250px 250px 250px;
       justify-content: center;
     }
   }
 
-  .portfólio figure {
+@media (min-width: 250px) {
+  .portfolio .video {
+    height: 426px;
+    width: 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .video {
+    height: 480px;
+    width: 720px;
+  }
+}
+
+  .sobre p {
+    color: white;
+    text-indent: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+
+
+  .portfolio figure {
     text-align: center;
   }
 
-  .portfólio {
+  .portfolio {
     background-color: ROYALBLUE;
-    padding: 0.5em;
+    padding: 1em;
   }
+
+  .sobre h2,
   .contato,
-  .portfólio h2{
+  .portfolio h2{
     font-family: 'Source Code Pro', monospace;
     color: silver;
     margin-bottom: 0.5em;
   }
 
+  .sobre {
+    padding: 0.5em;
+    min-height: 100 vh;
+    background-color: GoldenRod;
+  }
+
+.sobre .avatar {
+  float: right;
+  margin-left: 1.5em;
+}
+
+.sobre .avatar img {
+  object-fit: cover;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
   .img-portfolio {
-    height: 200px;
-    width: 210px;
+    height: 250px;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 500ms;
   }
 
   .img-portfolio:hover {
@@ -160,18 +204,18 @@ transition: backgraund-color 2s, color 1s;
   }
 
  .img-arroz {
-   height: 170px;
-   width: 100px;
-   border-radius: 50%;
+   height: 270px;
+   width: 250px;
+   border-radius: 25%;
    justify-content: center;
+   object-fit: cover;
  }
 
 .img-mudar {
-  width: 240px;
-  height: 170px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 500ms;
 }
 
 .img-mudar:hover {
@@ -179,11 +223,10 @@ transition: backgraund-color 2s, color 1s;
 }
 
 .img-mudar2 {
-  width: 240px;
-  height: 170px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 500ms;
 }
 
 .img-mudar2:hover {
@@ -192,20 +235,23 @@ transition: backgraund-color 2s, color 1s;
 
 .img-mudar3 {
   height: 210px;
-  width: 125px;
+  width: 100%;
   object-fit: cover;
-  object-position: top;
   border-radius: 20px;
-  transition: transform 500ms;
 }
 
 .img-mudar3:hover {
   transform: scale(1.4); 
 }
 
+
 .contato {
   background-color: black;
   padding: 0.5;
+}
+
+.contato {
+  font-size: 17px;
 }
 
 .contato .icons: {
